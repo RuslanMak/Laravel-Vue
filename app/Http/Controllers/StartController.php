@@ -47,7 +47,7 @@ class StartController extends Controller
            'labels' => ['март', 'апрель', 'май', 'июнь'],
             'datasets' => array([
                 'label' => 'Продажи',
-                'backgroundColor' => '#F26202',
+                'backgroundColor' => ['#F26202', '#EAAE00', '#Do1919', '#B5CC18'],
                 'data' => [15000, 5000, 40000, 10000]
             ])
         ];
