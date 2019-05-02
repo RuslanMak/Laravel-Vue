@@ -6,79 +6,38 @@ use Illuminate\Http\Request;
 
 class StartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('start');
+        $url_data = [
+            array(
+                'title' => 'Ruslan-DEVELOP',
+                'url' => 'https://dka-develop.ru'
+            ),
+            array(
+                'title' => 'YouTube',
+                'url' => 'https://youtube.com'
+            )
+        ];
+
+//        dd($url_data);
+//        dd(json_encode($url_data));
+
+        return view('start', [
+            'url_data' => $url_data
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function getJson()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return [
+            array(
+                'title' => 'Google',
+                'url' => 'https://google.com'
+            ),
+            array(
+                'title' => 'Yandex',
+                'url' => 'http://ya.ru'
+            )
+        ];
     }
 }

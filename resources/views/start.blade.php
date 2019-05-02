@@ -27,7 +27,7 @@
                         <div class="card">
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#1 Example component</h2>
-                                {{--<example-component></example-component>--}}
+                                <example-component></example-component>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <div class="card">
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#2 Передача данных в Vue из Blade</h2>
-                                {{--<prop-component :urldata="{{ json_encode($url_data) }}"></prop-component>--}}
+                                <prop-component :urldata="{{ json_encode($url_data) }}"></prop-component>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                         <div class="card">
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#3 Ajax</h2>
-                                {{--<ajax-component></ajax-component>--}}
+                                <ajax-component></ajax-component>
                             </div>
                         </div>
                     </div>
