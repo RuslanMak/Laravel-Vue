@@ -11,11 +11,19 @@
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <a type="button" class="btn btn-secondary" href="#1">Example component</a>
-                    <a type="button" class="btn btn-secondary" href="#2">Vue -> Blade</a>
-                    <a type="button" class="btn btn-secondary" href="#3">Ajax</a>
-                    <a type="button" class="btn btn-secondary" href="#4">ChartJS - Line</a>
-                    <a type="button" class="btn btn-secondary" href="#5">ChartJS - Pie</a>
+                    <a type="button" class="btn btn-light" href="#1">Example component</a>
+                    <a type="button" class="btn btn-light" href="#2">Vue -> Blade</a>
+                    <a type="button" class="btn btn-light" href="#3">Ajax</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <a type="button" class="btn btn-light" href="#4">ChartJS - Line</a>
+                    <a type="button" class="btn btn-light" href="#5">ChartJS - Pie</a>
+                    <a type="button" class="btn btn-light" href="#6">ChartJS - Random</a>
                 </div>
             </div>
         </div>
@@ -74,6 +82,17 @@
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#5 ChartJS (Pie) $ VueJS *ajax</h2>
                                 <chartpie-component></chartpie-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row m-2" data-hash="6">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body" style="min-height: 720px">
+                                <h2 class="text-center">#6 ChartJS (Line Random) $ VueJS *ajax</h2>
+                                <chartrandom-component></chartrandom-component>
                             </div>
                         </div>
                     </div>
