@@ -24,6 +24,7 @@
                     <a type="button" class="btn btn-light" href="#4">ChartJS - Line</a>
                     <a type="button" class="btn btn-light" href="#5">ChartJS - Pie</a>
                     <a type="button" class="btn btn-light" href="#6">ChartJS - Random</a>
+                    <a type="button" class="btn btn-light" href="#7">ChartJS - REALTIME (Socket)</a>
                 </div>
             </div>
         </div>
@@ -93,6 +94,17 @@
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#6 ChartJS (Line Random) $ VueJS *ajax</h2>
                                 <chartrandom-component></chartrandom-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row m-2" data-hash="7">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body" style="min-height: 720px">
+                                <h2 class="text-center">#7 REALTIME ChartJS (Line) $ VueJS *ajax+trigger+reload</h2>
+                                <socket-component></socket-component>
                             </div>
                         </div>
                     </div>

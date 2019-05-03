@@ -71,4 +71,29 @@ class StartController extends Controller
             )
         ];
     }
+
+    public function newEvent(Request $request) {
+        $result = [
+            'labels' => ['март', 'апрель', 'май', 'июнь'],
+            'datasets' => array([
+                'label' => 'Продажи',
+                'backgroundColor' => '#F26202',
+                'data' => [15000, 5000, 40000, 10000]
+            ])
+        ];
+
+        if ($request->has('label')) {
+            $result['labels'][] = $request->input('label');
+            $result['datasets'][0]['data'][] = (integer)$request->input('sale');
+
+            if ($request->has('realtime')) {
+//                if ($request->input('realtime') == 'true') {
+                if (filter_var($request->input('realtime'), FILTER_VALIDATE_BOOLEAN)) {
+                    event(new \App\Events\NewEvent($result));
+                }
+            }
+        }
+
+        return $result;
+    }
 }
