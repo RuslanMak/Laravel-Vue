@@ -27,7 +27,8 @@
         mounted() {
             var socket = io('http://localhost:3000');
 
-            socket.on("news-action:App\\Events\\NewMessage", function (data) {
+            socket.on("news-action.:App\\Events\\NewMessage", function (data) {
+                console.dir(data);
                 this.dataMessages.push(data.message);
             }.bind(this));
         },

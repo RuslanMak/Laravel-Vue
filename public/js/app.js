@@ -94849,7 +94849,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var socket = io('http://localhost:3000');
 
-        socket.on("news-action:App\\Events\\NewEvent", function (data) {
+        socket.on("news-action.:App\\Events\\NewEvent", function (data) {
             this.data = data.result;
         }.bind(this));
         this.update();
@@ -95095,7 +95095,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var socket = io('http://localhost:3000');
 
-        socket.on("news-action:App\\Events\\NewMessage", function (data) {
+        socket.on("news-action.:App\\Events\\NewMessage", function (data) {
+            console.dir(data);
             this.dataMessages.push(data.message);
         }.bind(this));
     },
