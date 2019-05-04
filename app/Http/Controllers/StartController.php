@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Events\NewMessage;
+use App\Events\PrivateMessage;
 
 class StartController extends Controller
 {
@@ -100,5 +101,12 @@ class StartController extends Controller
 
     public function sendMessage(Request $request) {
         event(new NewMessage($request->input('message')));
+    }
+
+    public function PrivateMessage(Request $request) {
+        PrivateMessage::dispatch($request->all());
+//        event(new PrivateMessage($request->all()));
+
+        return $request->all();
     }
 }

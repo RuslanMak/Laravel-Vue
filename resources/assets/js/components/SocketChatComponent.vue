@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <textarea rows="6" class="form-control" readonly="">{{ dataMessage.join('\n') }}</textarea>
+                    <textarea rows="6" class="form-control" readonly="">{{ dataMessages.join('\n') }}</textarea>
                 </div>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Enter a new message..." v-model="message">
@@ -20,7 +20,7 @@
     export default {
         data: function() {
             return {
-                dataMessage: [],
+                dataMessages: [],
                 message: '',
             }
         },
@@ -28,7 +28,7 @@
             var socket = io('http://localhost:3000');
 
             socket.on("news-action:App\\Events\\NewMessage", function (data) {
-                this.dataMessage.push(data.message);
+                this.dataMessages.push(data.message);
             }.bind(this));
         },
         methods: {

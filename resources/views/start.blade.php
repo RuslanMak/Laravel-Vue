@@ -32,7 +32,8 @@
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr-2" role="group" aria-label="First group">
                     <a type="button" class="btn btn-light" href="#7">ChartJS - REALTIME (Socket)</a>
-                    <a type="button" class="btn btn-light" href="#8">Chat - REALTIME (Socket)</a>
+                    <a type="button" class="btn btn-light" href="#8">Chat - REALTIME</a>
+                    <a type="button" class="btn btn-light" href="#9">Chat - Private</a>
                 </div>
             </div>
         </div>
@@ -122,8 +123,25 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body" style="min-height: 720px">
-                                <h2 class="text-center">#8 REALTIME Chat (Line) $ VueJS *ajax+trigger+reload</h2>
+                                <h2 class="text-center">#8 REALTIME Chat $ VueJS *ajax+trigger+reload</h2>
                                 <socket-chat-component></socket-chat-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row m-2" data-hash="9">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body" style="min-height: 720px">
+                                <h2 class="text-center">#9 REALTIME Chat Private $ VueJS *ajax+trigger+reload</h2>
+                                @if(Auth::check())
+                                    <h4 class="text-center">пользователь: {{ Auth::user()->email }}</h4>
+                                    <socket-private-component
+                                        :users="{{ \App\User::select('email', 'id')->where('id', '!=', Auth::id())->get() }}"
+                                        :user="{{ Auth::user() }}"
+                                    ></socket-private-component>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -24,3 +24,4 @@ Route::get('/start/data-chart', 'StartController@chartData');
 Route::get('/start/random-chart', 'StartController@chartRandom');
 Route::get('/start/socket-chart', 'StartController@newEvent');
 Route::get('/start/send-message', 'StartController@sendMessage');
+Route::get('/start/send-private-message', 'StartController@PrivateMessage');
