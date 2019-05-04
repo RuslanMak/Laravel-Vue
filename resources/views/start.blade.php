@@ -24,7 +24,15 @@
                     <a type="button" class="btn btn-light" href="#4">ChartJS - Line</a>
                     <a type="button" class="btn btn-light" href="#5">ChartJS - Pie</a>
                     <a type="button" class="btn btn-light" href="#6">ChartJS - Random</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
                     <a type="button" class="btn btn-light" href="#7">ChartJS - REALTIME (Socket)</a>
+                    <a type="button" class="btn btn-light" href="#8">Chat - REALTIME (Socket)</a>
                 </div>
             </div>
         </div>
@@ -105,6 +113,17 @@
                             <div class="card-body" style="min-height: 720px">
                                 <h2 class="text-center">#7 REALTIME ChartJS (Line) $ VueJS *ajax+trigger+reload</h2>
                                 <socket-component></socket-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row m-2" data-hash="8">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body" style="min-height: 720px">
+                                <h2 class="text-center">#8 REALTIME Chat (Line) $ VueJS *ajax+trigger+reload</h2>
+                                <socket-chat-component></socket-chat-component>
                             </div>
                         </div>
                     </div>
